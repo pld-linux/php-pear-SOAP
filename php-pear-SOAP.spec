@@ -43,7 +43,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{_pearname}-%{version}/{example,interop,test}/*
+%doc %{_pearname}-%{version}/{example,interop,test}
 %dir %{php_pear_dir}/%{_class}
 %dir %{php_pear_dir}/%{_class}/tools
 %dir %{php_pear_dir}/%{_class}/Transport
