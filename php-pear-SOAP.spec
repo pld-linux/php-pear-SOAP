@@ -14,7 +14,6 @@ BuildRequires:	rpm-php-pearprov
 Requires:	php-bcmath
 Requires:	php-pcre
 Requires:	php-pear
-Provides:	pear(%{_pearname})
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
