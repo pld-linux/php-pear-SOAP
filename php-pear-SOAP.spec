@@ -4,11 +4,11 @@
 Summary:	%{_pearname} - Client/Server for PHP
 Summary(pl):	%{_pearname} - klient/serwer dla PHP
 Name:		php-pear-%{_pearname}
-Version:	0.6.2
-Release:	2
+Version:	0.7.3
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-# Source0-md5:	9642d608811cde1091a7262c2465bca3
+# Source0-md5:	d901d1df6d488683790dc57f26fca98c
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 Patch0:		%{name}-DIME_fix.patch
 URL:		http://pear.php.net/
