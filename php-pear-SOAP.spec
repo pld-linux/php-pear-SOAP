@@ -1,8 +1,8 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		SOAP
 %define		_pearname	%{_class}
-Summary:	%{_class} - Client/Server for PHP
-Summary(pl):	%{_class} - klient/serwer dla PHP
+Summary:	%{_pearname} - Client/Server for PHP
+Summary(pl):	%{_pearname} - klient/serwer dla PHP
 Name:		php-pear-%{_pearname}
 Version:	0.6.2
 Release:	1
