@@ -12,7 +12,7 @@ License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{_rc}.tgz
 # Source0-md5:	b6145cbb68e8bf3f8dded07df936269b
-URL:		http://pear.php.net/package/%{_pearname}/
+URL:		http://pear.php.net/package/SOAP/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-bcmath
 Requires:	php-pcre
