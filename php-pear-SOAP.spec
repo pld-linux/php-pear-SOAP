@@ -8,6 +8,7 @@ Version:	0.6.2
 Release:	2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
+# Source0-md5:	9642d608811cde1091a7262c2465bca3
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 Patch0:		%{name}-DIME_fix.patch
 URL:		http://pear.php.net/
