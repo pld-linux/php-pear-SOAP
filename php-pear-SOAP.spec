@@ -24,7 +24,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Implementation of SOAP protocol and services.
 
-This class has in PEAR status; %{_status}.
+In PEAR status of this package is; %{_status}.
 
 %description -l pl
 Implementacja protoko³u SOAP i jego serwisów.
