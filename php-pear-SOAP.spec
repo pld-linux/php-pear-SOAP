@@ -2,7 +2,8 @@
 %define		_class		SOAP
 %define		_pearname	%{_class}
 %define		_status		beta
-%define		_rc		RC2
+%define		_rc		RC3
+
 Summary:	%{_pearname} - Client/Server for PHP
 Summary(pl):	%{_pearname} - klient/serwer dla PHP
 Name:		php-pear-%{_pearname}
@@ -11,7 +12,7 @@ Release:	0.%{_rc}
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{_rc}.tgz
-# Source0-md5:	b6145cbb68e8bf3f8dded07df936269b
+# Source0-md5:	1181071986f31a89ecc5a4aa5fd8c9c4
 URL:		http://pear.php.net/package/SOAP/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-bcmath
