@@ -1,6 +1,7 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		SOAP
 %define		_pearname	%{_class}
+%define		_status		beta
 Summary:	%{_pearname} - Client/Server for PHP
 Summary(pl):	%{_pearname} - klient/serwer dla PHP
 Name:		php-pear-%{_pearname}
@@ -10,7 +11,6 @@ License:	PHP 2.02
 Group:		Development/Languages/PHP
 # Source0-md5:	d901d1df6d488683790dc57f26fca98c
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-Patch0:		%{name}-DIME_fix.patch
 URL:		http://pear.php.net/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-bcmath
@@ -22,12 +22,15 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Implementation of SOAP protocol and services.
 
+This class has in PEAR status; %{_status}.
+
 %description -l pl
 Implementacja protoko³u SOAP i jego serwisów.
 
+Ta klasa ma w PEAR status: %{_status}.
+
 %prep
 %setup -q -c
-%patch0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -44,7 +47,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{_pearname}-%{version}/{example,interop,test}
+%doc %{_pearname}-%{version}/example
 %dir %{php_pear_dir}/%{_class}
 %dir %{php_pear_dir}/%{_class}/tools
 %dir %{php_pear_dir}/%{_class}/Transport
