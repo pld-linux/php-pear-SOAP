@@ -11,7 +11,7 @@ License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}RC1.tgz
 # Source0-md5:	2e00da93b3b38a3daa7de33cba3dfe61
-URL:		http://pear.php.net/
+URL:		http://pear.php.net/package/%{_pearname}/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-bcmath
 Requires:	php-pcre
