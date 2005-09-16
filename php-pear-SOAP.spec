@@ -6,12 +6,12 @@
 Summary:	%{_pearname} - Client/Server for PHP
 Summary(pl):	%{_pearname} - klient/serwer dla PHP
 Name:		php-pear-%{_pearname}
-Version:	0.8.1
+Version:	0.9.1
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	86260a6deb9ab09443563c931784f550
+# Source0-md5:	58d6a2f8acb7afcfe7d58661e554d54d
 URL:		http://pear.php.net/package/SOAP/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-bcmath
