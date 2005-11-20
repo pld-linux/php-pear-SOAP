@@ -2,12 +2,11 @@
 %define		_class		SOAP
 %define		_pearname	%{_class}
 %define		_status		beta
-
 Summary:	%{_pearname} - Client/Server for PHP
 Summary(pl):	%{_pearname} - klient/serwer dla PHP
 Name:		php-pear-%{_pearname}
 Version:	0.9.1
-Release:	2
+Release:	3
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
