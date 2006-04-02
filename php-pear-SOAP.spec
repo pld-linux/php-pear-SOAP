@@ -5,12 +5,12 @@
 Summary:	%{_pearname} - Client/Server for PHP
 Summary(pl):	%{_pearname} - klient/serwer dla PHP
 Name:		php-pear-%{_pearname}
-Version:	0.9.1
-Release:	3
+Version:	0.9.3
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	58d6a2f8acb7afcfe7d58661e554d54d
+# Source0-md5:	b016e4cb3654bf97ac7fef4ea98abdfd
 URL:		http://pear.php.net/package/SOAP/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -18,8 +18,12 @@ Requires:	php-bcmath
 Requires:	php-common >= 3:4.1
 Requires:	php-pcre
 Requires:	php-pear
+Requires:	php-pear-HTTP_Request
+Requires:	php-pear-PEAR-core
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_noautoreq	'pear(Mail.*)' 'pear(Mail/Mime.*)' 'pear(Net/DIME.*)'
 
 %description
 Implementation of SOAP protocol and services.
@@ -39,12 +43,17 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}
 %pear_package_install
 
+%post
+if [ -f %{_docdir}/%{name}-%{version}/optional-packages.txt ]; then
+	cat %{_docdir}/%{name}-%{version}/optional-packages.txt
+fi
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc install.log
+%doc install.log optional-packages.txt
 %doc docs/%{_pearname}/example
 %{php_pear_dir}/.registry/*.reg
 %dir %{php_pear_dir}/%{_class}
