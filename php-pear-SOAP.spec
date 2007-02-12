@@ -3,7 +3,7 @@
 %define		_pearname	%{_class}
 %define		_status		beta
 Summary:	%{_pearname} - Client/Server for PHP
-Summary(pl.UTF-8):   %{_pearname} - klient/serwer dla PHP
+Summary(pl.UTF-8):	%{_pearname} - klient/serwer dla PHP
 Name:		php-pear-%{_pearname}
 Version:	0.9.4
 Release:	2
