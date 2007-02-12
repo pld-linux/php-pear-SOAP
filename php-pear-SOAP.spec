@@ -3,7 +3,7 @@
 %define		_pearname	%{_class}
 %define		_status		beta
 Summary:	%{_pearname} - Client/Server for PHP
-Summary(pl):	%{_pearname} - klient/serwer dla PHP
+Summary(pl.UTF-8):   %{_pearname} - klient/serwer dla PHP
 Name:		php-pear-%{_pearname}
 Version:	0.9.4
 Release:	2
@@ -31,8 +31,8 @@ Implementation of SOAP protocol and services.
 
 In PEAR status of this package is; %{_status}.
 
-%description -l pl
-Implementacja protoko≥u SOAP i jego serwisÛw.
+%description -l pl.UTF-8
+Implementacja protoko≈Çu SOAP i jego serwis√≥w.
 
 Ta klasa ma w PEAR status: %{_status}.
 
