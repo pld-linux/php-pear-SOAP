@@ -1,20 +1,19 @@
+%define		pearname	SOAP
+%define		status		beta
 %include	/usr/lib/rpm/macros.php
-%define		_class		SOAP
-%define		_pearname	%{_class}
-%define		_status		beta
-Summary:	%{_pearname} - Client/Server for PHP
-Summary(pl.UTF-8):	%{_pearname} - klient/serwer dla PHP
-Name:		php-pear-%{_pearname}
-Version:	0.12.0
-Release:	2
+Summary:	%{pearname} - Client/Server for PHP
+Summary(pl.UTF-8):	%{pearname} - klient/serwer dla PHP
+Name:		php-pear-%{pearname}
+Version:	0.13.0
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	cd49713ef96d47888639549f0ead08f7
+Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
+# Source0-md5:	117f22c06e5f749c14af7b44174f8bfc
 URL:		http://pear.php.net/package/SOAP/
 BuildRequires:	php-pear-PEAR >= 1:1.5.4
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
-BuildRequires:	rpmbuild(macros) >= 1.300
+BuildRequires:	rpmbuild(macros) >= 1.580
 Requires:	php(bcmath)
 Requires:	php(pcre)
 Requires:	php-common >= 3:4.1
@@ -27,25 +26,31 @@ Suggests:	php-pear-Net_DIME
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_noautoreq	'pear(Mail.*)' 'pear(Mail/Mime.*)' 'pear(Net/DIME.*)'
+%define		_noautoreq	pear(Mail.*) pear(Mail/Mime.*) pear(Net/DIME.*)
 
 %description
 Implementation of SOAP protocol and services.
 
-In PEAR status of this package is; %{_status}.
+In PEAR status of this package is; %{status}.
 
 %description -l pl.UTF-8
 Implementacja protokołu SOAP i jego serwisów.
 
-Ta klasa ma w PEAR status: %{_status}.
+Ta klasa ma w PEAR status: %{status}.
 
 %prep
 %pear_package_setup
+
+mv .%{php_pear_dir}/tools .
+mv docs/%{pearname}/example examples
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}
 %pear_package_install
+
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -58,15 +63,15 @@ fi
 %files
 %defattr(644,root,root,755)
 %doc install.log optional-packages.txt
-%doc docs/%{_pearname}/example
 %{php_pear_dir}/.registry/*.reg
-%dir %{php_pear_dir}/%{_class}
-%dir %{php_pear_dir}/%{_class}/tools
-%dir %{php_pear_dir}/%{_class}/Transport
-%dir %{php_pear_dir}/%{_class}/Server
-%dir %{php_pear_dir}/%{_class}/Type
-%{php_pear_dir}/%{_class}/*.php
-%{php_pear_dir}/%{_class}/tools/*.php
-%{php_pear_dir}/%{_class}/Transport/*.php
-%{php_pear_dir}/%{_class}/Server/*.php
-%{php_pear_dir}/%{_class}/Type/*.php
+%dir %{php_pear_dir}/SOAP
+%dir %{php_pear_dir}/SOAP/Transport
+%dir %{php_pear_dir}/SOAP/Server
+%dir %{php_pear_dir}/SOAP/Server/TCP
+%dir %{php_pear_dir}/SOAP/Type
+%{php_pear_dir}/SOAP/*.php
+%{php_pear_dir}/SOAP/Transport/*.php
+%{php_pear_dir}/SOAP/Server/*.php
+%{php_pear_dir}/SOAP/Server/TCP/Handler.php
+%{php_pear_dir}/SOAP/Type/*.php
+%{_examplesdir}/%{name}-%{version}
