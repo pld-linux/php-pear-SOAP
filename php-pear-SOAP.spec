@@ -13,7 +13,7 @@ Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
 URL:		http://pear.php.net/package/SOAP/
 BuildRequires:	php-pear-PEAR >= 1:1.5.4
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
-BuildRequires:	rpmbuild(macros) >= 1.580
+BuildRequires:	rpmbuild(macros) >= 1.654
 Requires:	php(bcmath)
 Requires:	php(core) >= 4.1
 Requires:	php(pcre)
@@ -26,7 +26,7 @@ Suggests:	php-pear-Net_DIME
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_noautoreq	pear(Mail.*) pear(Mail/Mime.*) pear(Net/DIME.*)
+%define		_noautoreq_pear Mail.* Mail/Mime.* Net/DIME.*
 
 %description
 Implementation of SOAP protocol and services.
