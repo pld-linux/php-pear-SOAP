@@ -4,12 +4,12 @@
 Summary:	%{pearname} - Client/Server for PHP
 Summary(pl.UTF-8):	%{pearname} - klient/serwer dla PHP
 Name:		php-pear-%{pearname}
-Version:	0.13.0
-Release:	2
+Version:	0.14.0
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
-# Source0-md5:	117f22c06e5f749c14af7b44174f8bfc
+# Source0-md5:	f559b8602147d6abbb28e11b4484844a
 URL:		http://pear.php.net/package/SOAP/
 BuildRequires:	php-pear-PEAR >= 1:1.5.4
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -62,7 +62,7 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc install.log optional-packages.txt
+%doc install.log 
 %{php_pear_dir}/.registry/*.reg
 %dir %{php_pear_dir}/SOAP
 %dir %{php_pear_dir}/SOAP/Transport
