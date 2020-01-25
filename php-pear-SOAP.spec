@@ -1,6 +1,5 @@
 %define		pearname	SOAP
 %define		status		beta
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - Client/Server for PHP
 Summary(pl.UTF-8):	%{pearname} - klient/serwer dla PHP
 Name:		php-pear-%{pearname}
