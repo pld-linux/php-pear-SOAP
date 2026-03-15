@@ -4,7 +4,7 @@ Summary:	%{pearname} - Client/Server for PHP
 Summary(pl.UTF-8):	%{pearname} - klient/serwer dla PHP
 Name:		php-pear-%{pearname}
 Version:	0.14.0
-Release:	1
+Release:	2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
